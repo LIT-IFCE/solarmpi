@@ -1,0 +1,60 @@
+name: CI/CD Pipeline
+
+# Defina os eventos que vão disparar o workflow
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Run Tests
+      run: |
+        source venv/bin/activate
+        pytest
+
+  mpi-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Install MPI
+      run: sudo apt-get update && sudo apt-get install -y mpich
+
+    - name: Run MPI simulation
+      run: |
+        source venv/bin/activate
+        mpiexec -n 4 python src/main.py
