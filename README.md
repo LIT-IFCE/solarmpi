@@ -35,7 +35,7 @@ solarmpi/
 ├── .gitignore                   # Arquivo para ignorar arquivos desnecessários no repositório
 ├── requirements.txt             # Dependências do projeto
 └── README.md                    # Documentação do projeto
-
+```
 ## Requisitos
 
 - **Hardware:**
