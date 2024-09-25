@@ -14,8 +14,8 @@ A solução proposta visa superar as limitações de infraestrutura de comunica�
 
 ## Estrutura do Projeto
 
-\`\`\`plaintext
-Cluster-MPI-LightGBM/
+```plaintext
+solarmpi/
 │
 ├── src/
 │   ├── main.py                 # Código principal do projeto
@@ -35,7 +35,6 @@ Cluster-MPI-LightGBM/
 ├── .gitignore                   # Arquivo para ignorar arquivos desnecessários no repositório
 ├── requirements.txt             # Dependências do projeto
 └── README.md                    # Documentação do projeto
-\`\`\`
 
 ## Requisitos
 
@@ -116,15 +115,7 @@ Após a execução dos scripts, você poderá verificar os modelos treinados e o
 
 O pipeline CI/CD já está configurado usando GitHub Actions. Toda vez que você fizer um \`push\` para o repositório, o pipeline será acionado para rodar testes e, se necessário, treinar o modelo novamente.
 
-## Contribuição
 
-Se você deseja contribuir com o projeto:
-
-1. **Faça um Fork:** Crie um fork do repositório.
-2. **Crie um Branch:** Crie um branch para sua feature (\`git checkout -b feature/nova-feature\`).
-3. **Commit:** Commit suas alterações (\`git commit -m 'Adiciona nova feature'\`).
-4. **Push:** Push para o branch (\`git push origin feature/nova-feature\`).
-5. **Pull Request:** Abra um Pull Request para que suas alterações sejam revisadas e, eventualmente, mescladas ao repositório principal.
 
 ## Licença
 
