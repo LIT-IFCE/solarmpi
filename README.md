@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este projeto, executado no Laboratório de Inovação Tecnológica (LIT) do Instituto Federal do Ceará (IFCE), é proveniente de trabalhos de pós-graduação do Programa de Pós-Graduação em Ciência da Computação (PPGCC IFCE). O objetivo do projeto é implementar um sistema distribuído utilizando um cluster de dispositivos Raspberry Pi para processar dados localmente em uma usina fotovoltaica, com o intuito de realizar predições em tempo real da geração de energia e detecção de anomalias. Além disso, o sistema ge...
+Este projeto, executado no Laboratório de Inovação Tecnológica (LIT) do Instituto Federal do Ceará (IFCE), é proveniente de trabalhos de pós-graduação do Programa de Pós-Graduação em Ciência da Computação (PPGCC IFCE). O objetivo do projeto é implementar um sistema distribuído utilizando um cluster de dispositivos Raspberry Pi para processar dados localmente em uma usina fotovoltaica, com o intuito de realizar predições em tempo real da geração de energia e detecção de anomalias.
 
 A solução proposta visa superar as limitações de infraestrutura de comunicação, frequentemente encontradas em áreas remotas onde as usinas estão localizadas, minimizando a necessidade de processamento em nuvem e garantindo respostas rápidas a condições ambientais variáveis. O projeto também integra um pipeline CI/CD que automatiza as operações de MLOps, facilitando a atualização e implantação contínua dos modelos de aprendizado de máquina.
 
