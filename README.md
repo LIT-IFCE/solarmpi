@@ -54,22 +54,22 @@ solarmpi/
 ## Instalação
 
 1. **Clone o Repositório:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/LIT-IDCE/solarmpi.git
    cd solarmpi
-   \`\`\`
+   ```
 
 2. **Crie e Ative um Ambiente Virtual:**
-   \`\`\`bash
+   ```bash
    python3 -m venv venv
    source venv/bin/activate   # Linux/Mac
    venv\Scripts\activate      # Windows
-   \`\`\`
+   ```
 
 3. **Instale as Dependências:**
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 4. **Configure as Raspberries:**
    - Certifique-se de que cada Raspberry Pi está configurada corretamente e conectada à rede WiFi Mesh.
@@ -81,9 +81,9 @@ solarmpi/
 
 Antes de iniciar o treinamento e a geração do mapa de sombreamento, é necessário simular os dados de irradiância, corrente e tensão para cada nó (Raspberry Pi). Para isso, execute o seguinte comando:
 
-\`\`\`bash
+```bash
 mpiexec -n 100 python src/data_simulation.py
-\`\`\`
+```
 
 Esse comando irá gerar arquivos CSV contendo os dados simulados para cada um dos 100 nós.
 
@@ -91,9 +91,9 @@ Esse comando irá gerar arquivos CSV contendo os dados simulados para cada um do
 
 Após a simulação dos dados, execute o código principal para iniciar o treinamento distribuído do modelo LightGBM em todas as Raspberry Pi:
 
-\`\`\`bash
+```bash
 mpiexec -n 100 python src/train_model_mpi.py
-\`\`\`
+```
 
 Esse comando distribuirá o treinamento do modelo entre os 100 nós, utilizando os dados simulados.
 
@@ -101,9 +101,9 @@ Esse comando distribuirá o treinamento do modelo entre os 100 nós, utilizando 
 
 Uma vez que o treinamento estiver concluído, você pode gerar o mapa de sombreamento utilizando os dados de irradiância e cobertura de nuvens:
 
-\`\`\`bash
+```bash
 mpiexec -n 100 python src/generate_shading_map.py
-\`\`\`
+```
 
 Este comando criará um mapa de sombreamento agregado a partir dos dados de todos os nós e salvará o resultado final.
 
