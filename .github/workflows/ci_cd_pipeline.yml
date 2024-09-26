@@ -51,8 +51,8 @@ jobs:
         source venv/bin/activate
         pip install -r requirements.txt
 
-    - name: Install MPI
-      run: sudo apt-get update && sudo apt-get install -y mpich
+    - name: Install OpenMPI
+      run: sudo apt-get update && sudo apt-get install -y openmpi-bin libopenmpi-dev
 
     - name: Run MPI simulation
       run: |
